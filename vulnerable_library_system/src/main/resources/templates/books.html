@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books</title>
+</head>
+<body>
+    <!-- Vuln 54: CWE-79 - Cross-Site Scripting (XSS) -->
+    <h1>Books</h1>
+    <form method="POST">
+        <input type="text" name="title" placeholder="Title">
+        <input type="text" name="author" placeholder="Author">
+        <input type="submit" value="Add Book">
+    </form>
+    <script>
+        document.write("Search: " + location.search.split('title=')[1]);
+    </script>
+</body>
+</html>

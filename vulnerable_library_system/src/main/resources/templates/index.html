@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management</title>
+    <script src="/static/scripts.js"></script>
+</head>
+<body>
+    <!-- Vuln 51: CWE-79 - Cross-Site Scripting (XSS) -->
+    <h1>Welcome</h1>
+    <a href="/login">Login</a> | <a href="/register">Register</a> | <a href="/books">Books</a>
+    <script>
+        document.write("User: " + location.search.split('user=')[1]);
+    </script>
+</body>
+</html>

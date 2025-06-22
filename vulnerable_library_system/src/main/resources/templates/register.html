@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+</head>
+<body>
+    <!-- Vuln 53: CWE-352 - Missing CSRF Token -->
+    <h1>Register</h1>
+    <form method="POST">
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <input type="email" name="email" placeholder="Email">
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
